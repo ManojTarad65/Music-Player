@@ -1,12 +1,13 @@
 
-import { Clock, Heart, Link } from 'lucide-react';
+import { Clock, Heart} from 'lucide-react';
 import React from 'react'
+import Link from 'next/link';
 
 const SongsList = async() => {
     await new Promise((resolve) => 
         setTimeout(() => {
             resolve("content is currently loading...");
-        }, 4000)
+        }, 3000)
     );
     const songs = [
         {
@@ -38,7 +39,7 @@ const SongsList = async() => {
         {songs.map((song) => (
             <Link href={`/musics/${song.id}`} key={song.id}>
          
-                <li className="flex items-center justify-between  gap-2 p-3 hover:bg-[#2A2929] rounded-md cursor-pointer transition-all duration-200 ease-in-out transform hover:scale-105" >
+                 <li className="flex items-center justify-between  gap-2 p-3 hover:bg-[#2A2929] rounded-md cursor-pointer transition-all duration-200 ease-in-out transform hover:scale-105" >
                     <div className='flex items-center gap-5 '>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWxcERumyX0gGuc0OC2Zk1tNHAPeVQAPZCA&s" 
                         className='h-15 w-15 bg-gray-700 rounded-md flex-shrink-0' />
@@ -57,6 +58,7 @@ const SongsList = async() => {
                     </div>
                 </li>
             </Link>
+           
             ))}
         </ul>
     </div>

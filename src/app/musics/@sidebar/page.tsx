@@ -5,7 +5,7 @@ const Sidebar = async() => {
     await new Promise((resolve) => 
         setTimeout(() => {
             resolve("content is currently loading...");
-        }, 2000)
+        }, 1000)
     );
   return (
     <aside className='w-64 bg-[#111111] text-white flex flex-col justify-between min-h-screen p-4'>
